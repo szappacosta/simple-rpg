@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Fight;
+
+use App\Entity\CharacterInterface;
+
+class FightResult
+{
+    public ?CharacterInterface $winner = null;
+
+    public int $turns = 0;
+
+    public function isDraw(): bool
+    {
+        return $this->winner === null;
+    }
+}
