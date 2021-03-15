@@ -9,7 +9,7 @@ class FightSimulator
     public function simulate(CharacterInterface $character, CharacterInterface $character2): FightResult
     {
         $turns = 0;
-        while (!$character->isDead() || !$character2->isDead()) {
+        while (!$character->isDead() && !$character2->isDead()) {
             $turns++;
             $character->attack($character2);
             $character2->attack($character);
@@ -25,5 +25,7 @@ class FightSimulator
         if (!$character2->isDead() && $character->isDead()) {
             $fightResult->winner = $character2;
         }
+
+        return $fightResult;
     }
 }

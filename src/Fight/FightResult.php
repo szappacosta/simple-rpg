@@ -6,7 +6,7 @@ use App\Entity\CharacterInterface;
 
 class FightResult
 {
-    public ?CharacterInterface $winner;
+    public ?CharacterInterface $winner = null;
 
     public int $turns = 0;
 

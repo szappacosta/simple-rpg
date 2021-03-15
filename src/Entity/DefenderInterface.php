@@ -4,9 +4,9 @@ namespace App\Entity;
 
 interface DefenderInterface
 {
-    public function takeDamage(integer $damage);
+    public function takeDamage(int $damage);
 
-    public function getHealth(): integer;
+    public function getHealth(): int;
 
     public function isDead(): bool;
 }
